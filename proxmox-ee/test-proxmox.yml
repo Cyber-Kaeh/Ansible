@@ -1,0 +1,32 @@
+---
+- name: Test Proxmox Connection
+  hosts: localhost
+  gather_facts: false
+
+
+  tasks:
+    - name: Authenticate to Proxmox API
+      uri:
+        url: "https://{{ proxmox_api_host }}:{{ proxmox_api_port | default(8006) }}/api2/json/access/ticket"
+        method: POST
+        body_format: form-urlencoded
+        body:
+          username: "{{ proxmox_api_user }}"
+          password: "{{ proxmox_password }}"
+        validate_certs: false
+        return_content: true
+      register: proxmox_auth
+
+    - name: Get list of all LXC containers
+      uri:
+        url: "https://{{ proxmox_api_host }}:{{ proxmox_api_port | default(8006) }}/api2/json/nodes/{{ proxmox_node }}/lxc"
+        method: GET
+        headers:
+          Cookie: "PVEAuthCookie={{ proxmox_auth.json.data.ticket }}"
+        validate_certs: false
+        return_content: true
+      register: containers
+
+    - name: Display containers
+      ansible.builtin.debug:
+        msg: "{{ containers }}"

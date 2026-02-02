@@ -1,0 +1,19 @@
+---
+version: 3
+
+images:
+  base_image:
+    name: quay.io/centos/centos:stream9
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core>=2.15.0
+  ansible_runner:
+    package_pip: ansible-runner
+  galaxy: requirements.yml
+  python: requirements.txt
+  # Removing system deps to simplify - we don't need compile-time packages
+
+additional_build_steps:
+  append_final:
+    - RUN echo "Proxmox EE build complete"

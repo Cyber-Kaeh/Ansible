@@ -1,0 +1,2 @@
+# No system packages required for basic Proxmox management
+# proxmoxer and requests are pure Python packages

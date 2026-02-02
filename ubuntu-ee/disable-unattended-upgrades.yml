@@ -1,0 +1,27 @@
+---
+- name: Disable unattended upgrades on Ubuntu 22.04
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure unattended-upgrades package is absent
+      ansible.builtin.apt:
+        name: unattended-upgrades
+        state: absent
+
+    - name: Disable and stop unattended-upgrades service
+      ansible.builtin.systemd_service:
+        name: unattended-upgrades
+        enabled: false
+        state: stopped
+        masked: false
+      failed_when: >
+        (systemd_service is failed) and
+        ('Could not find the requested service' not in (systemd_service.msg | default('')))
+
+    - name: Remove auto-upgrade configuration files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /etc/apt/apt.conf.d/20auto-upgrades
+        - /etc/apt/apt.conf.d/50unattended-upgrades

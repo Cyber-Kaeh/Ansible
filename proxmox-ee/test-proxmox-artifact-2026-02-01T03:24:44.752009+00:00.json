@@ -1,0 +1,367 @@
+{
+    "plays": [
+        {
+            "__play_name": "Test Proxmox Connection",
+            "name": "Test Proxmox Connection",
+            "pattern": "localhost",
+            "play": "Test Proxmox Connection",
+            "play_pattern": "localhost",
+            "play_uuid": "a69d1dbd-afb1-1dab-e0b7-000000000002",
+            "playbook": "/workspaces/proxmox-ee/test-proxmox.yml",
+            "playbook_uuid": "6136eb53-53fc-419e-82b0-3fd0ce150d85",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Authenticate to Proxmox API",
+                    "__task_action": "uri",
+                    "duration": 0.297626,
+                    "end": "2026-02-01T03:24:44.521446+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Test Proxmox Connection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "a69d1dbd-afb1-1dab-e0b7-000000000002",
+                    "playbook": "/workspaces/proxmox-ee/test-proxmox.yml",
+                    "playbook_uuid": "6136eb53-53fc-419e-82b0-3fd0ce150d85",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "cache_control": "max-age=0",
+                        "changed": false,
+                        "connection": "close",
+                        "content": "{\"data\":{\"username\":\"root@pam\",\"CSRFPreventionToken\":\"697EC77B:GnQUSuJSNH4avxqHmJI24NgT2NvauUc7y58Z5UEX/ZU\",\"ticket\":\"PVE:root@pam:697EC77B::UrwZr1i0RkWTMjedD6swzT/DFzMJfySNV79SO/Z9Vk4j9U6lOjQ2LLsFJqcpsa8oBfooQP0rxtD+nJZyrNF2yaL8PS2mfBBcehWKvQ67cFJxTJLS77KzrvshyuO9dq2jWqR4wectr9aCH24JL9GawgmLtYJu8xiYByNi0D0tmevk9GkhZoBtSSWtaxqfDAd9LgnYMqSnP7VHQdBsIF5Nkz3udKHZgXiZoOB88F/9+fnZY8x8NKd/WLBWv+xEQ20zoX/cgrZk67PXj+PUTBD2ZbIlYiRMcFj+IIIUVm102SuS8GXaM89z6V88oo0o2vmNnV9QvmA0yys9WEUPjThZdg==\",\"cap\":{\"storage\":{\"Permissions.Modify\":1,\"Datastore.AllocateSpace\":1,\"Datastore.Audit\":1,\"Datastore.Allocate\":1,\"Datastore.AllocateTemplate\":1},\"mapping\":{\"Permissions.Modify\":1,\"Mapping.Use\":1,\"Mapping.Audit\":1,\"Mapping.Modify\":1},\"dc\":{\"Sys.Audit\":1,\"SDN.Use\":1,\"SDN.Allocate\":1,\"Sys.Modify\":1,\"SDN.Audit\":1},\"access\":{\"Group.Allocate\":1,\"User.Modify\":1,\"Permissions.Modify\":1},\"nodes\":{\"Sys.PowerMgmt\":1,\"Sys.AccessNetwork\":1,\"Sys.Console\":1,\"Sys.Modify\":1,\"Sys.Audit\":1,\"Sys.Syslog\":1,\"Sys.Incoming\":1,\"Permissions.Modify\":1},\"sdn\":{\"Permissions.Modify\":1,\"SDN.Allocate\":1,\"SDN.Audit\":1,\"SDN.Use\":1},\"vms\":{\"VM.Backup\":1,\"VM.Monitor\":1,\"VM.Config.Network\":1,\"VM.Clone\":1,\"VM.Audit\":1,\"VM.PowerMgmt\":1,\"VM.Config.Disk\":1,\"VM.Snapshot\":1,\"VM.Config.CPU\":1,\"Permissions.Modify\":1,\"VM.Config.CDROM\":1,\"VM.Config.HWType\":1,\"VM.Config.Options\":1,\"VM.Config.Cloudinit\":1,\"VM.Allocate\":1,\"VM.Snapshot.Rollback\":1,\"VM.Migrate\":1,\"VM.Config.Memory\":1,\"VM.Console\":1}}}}",
+                        "content_length": "1450",
+                        "content_type": "application/json;charset=UTF-8",
+                        "cookies": {},
+                        "cookies_string": "",
+                        "date": "Sun, 01 Feb 2026 03:24:43 GMT",
+                        "elapsed": 0,
+                        "expires": "Sun, 01 Feb 2026 03:24:43 GMT",
+                        "invocation": {
+                            "module_args": {
+                                "attributes": null,
+                                "body": {
+                                    "password": "ElishNorn#416",
+                                    "username": "root@pam"
+                                },
+                                "body_format": "form-urlencoded",
+                                "ca_path": null,
+                                "ciphers": null,
+                                "client_cert": null,
+                                "client_key": null,
+                                "creates": null,
+                                "decompress": true,
+                                "dest": null,
+                                "follow_redirects": "safe",
+                                "force": false,
+                                "force_basic_auth": false,
+                                "group": null,
+                                "headers": {
+                                    "Content-Type": "application/x-www-form-urlencoded"
+                                },
+                                "http_agent": "ansible-httpget",
+                                "method": "POST",
+                                "mode": null,
+                                "owner": null,
+                                "remote_src": false,
+                                "removes": null,
+                                "return_content": true,
+                                "selevel": null,
+                                "serole": null,
+                                "setype": null,
+                                "seuser": null,
+                                "src": null,
+                                "status_code": [
+                                    200
+                                ],
+                                "timeout": 30,
+                                "unix_socket": null,
+                                "unredirected_headers": [],
+                                "unsafe_writes": false,
+                                "url": "https://192.168.10.21:8006/api2/json/access/ticket",
+                                "url_password": null,
+                                "url_username": null,
+                                "use_gssapi": false,
+                                "use_netrc": true,
+                                "use_proxy": true,
+                                "validate_certs": false
+                            }
+                        },
+                        "json": {
+                            "data": {
+                                "CSRFPreventionToken": "697EC77B:GnQUSuJSNH4avxqHmJI24NgT2NvauUc7y58Z5UEX/ZU",
+                                "cap": {
+                                    "access": {
+                                        "Group.Allocate": 1,
+                                        "Permissions.Modify": 1,
+                                        "User.Modify": 1
+                                    },
+                                    "dc": {
+                                        "SDN.Allocate": 1,
+                                        "SDN.Audit": 1,
+                                        "SDN.Use": 1,
+                                        "Sys.Audit": 1,
+                                        "Sys.Modify": 1
+                                    },
+                                    "mapping": {
+                                        "Mapping.Audit": 1,
+                                        "Mapping.Modify": 1,
+                                        "Mapping.Use": 1,
+                                        "Permissions.Modify": 1
+                                    },
+                                    "nodes": {
+                                        "Permissions.Modify": 1,
+                                        "Sys.AccessNetwork": 1,
+                                        "Sys.Audit": 1,
+                                        "Sys.Console": 1,
+                                        "Sys.Incoming": 1,
+                                        "Sys.Modify": 1,
+                                        "Sys.PowerMgmt": 1,
+                                        "Sys.Syslog": 1
+                                    },
+                                    "sdn": {
+                                        "Permissions.Modify": 1,
+                                        "SDN.Allocate": 1,
+                                        "SDN.Audit": 1,
+                                        "SDN.Use": 1
+                                    },
+                                    "storage": {
+                                        "Datastore.Allocate": 1,
+                                        "Datastore.AllocateSpace": 1,
+                                        "Datastore.AllocateTemplate": 1,
+                                        "Datastore.Audit": 1,
+                                        "Permissions.Modify": 1
+                                    },
+                                    "vms": {
+                                        "Permissions.Modify": 1,
+                                        "VM.Allocate": 1,
+                                        "VM.Audit": 1,
+                                        "VM.Backup": 1,
+                                        "VM.Clone": 1,
+                                        "VM.Config.CDROM": 1,
+                                        "VM.Config.CPU": 1,
+                                        "VM.Config.Cloudinit": 1,
+                                        "VM.Config.Disk": 1,
+                                        "VM.Config.HWType": 1,
+                                        "VM.Config.Memory": 1,
+                                        "VM.Config.Network": 1,
+                                        "VM.Config.Options": 1,
+                                        "VM.Console": 1,
+                                        "VM.Migrate": 1,
+                                        "VM.Monitor": 1,
+                                        "VM.PowerMgmt": 1,
+                                        "VM.Snapshot": 1,
+                                        "VM.Snapshot.Rollback": 1
+                                    }
+                                },
+                                "ticket": "PVE:root@pam:697EC77B::UrwZr1i0RkWTMjedD6swzT/DFzMJfySNV79SO/Z9Vk4j9U6lOjQ2LLsFJqcpsa8oBfooQP0rxtD+nJZyrNF2yaL8PS2mfBBcehWKvQ67cFJxTJLS77KzrvshyuO9dq2jWqR4wectr9aCH24JL9GawgmLtYJu8xiYByNi0D0tmevk9GkhZoBtSSWtaxqfDAd9LgnYMqSnP7VHQdBsIF5Nkz3udKHZgXiZoOB88F/9+fnZY8x8NKd/WLBWv+xEQ20zoX/cgrZk67PXj+PUTBD2ZbIlYiRMcFj+IIIUVm102SuS8GXaM89z6V88oo0o2vmNnV9QvmA0yys9WEUPjThZdg==",
+                                "username": "root@pam"
+                            }
+                        },
+                        "msg": "OK (1450 bytes)",
+                        "pragma": "no-cache",
+                        "redirected": false,
+                        "server": "pve-api-daemon/3.0",
+                        "status": 200,
+                        "url": "https://192.168.10.21:8006/api2/json/access/ticket"
+                    },
+                    "resolved_action": "ansible.builtin.uri",
+                    "start": "2026-02-01T03:24:44.223820+00:00",
+                    "task": "Authenticate to Proxmox API",
+                    "task_action": "uri",
+                    "task_args": "",
+                    "task_path": "/workspaces/proxmox-ee/test-proxmox.yml:8",
+                    "task_uuid": "a69d1dbd-afb1-1dab-e0b7-000000000004",
+                    "uuid": "b24621a2-d598-4db3-90ca-c6458414998d"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 1,
+                    "__result": "Failed",
+                    "__task": "Get list of all LXC containers",
+                    "__task_action": "uri",
+                    "duration": 0.013072,
+                    "end": "2026-02-01T03:24:44.537348+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "ignore_errors": null,
+                    "play": "Test Proxmox Connection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "a69d1dbd-afb1-1dab-e0b7-000000000002",
+                    "playbook": "/workspaces/proxmox-ee/test-proxmox.yml",
+                    "playbook_uuid": "6136eb53-53fc-419e-82b0-3fd0ce150d85",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "The task includes an option with an undefined variable. The error was: 'proxmox_node' is undefined. 'proxmox_node' is undefined\n\nThe error appears to be in '/workspaces/proxmox-ee/test-proxmox.yml': line 20, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Get list of all LXC containers\n      ^ here\n"
+                    },
+                    "resolved_action": "ansible.builtin.uri",
+                    "start": "2026-02-01T03:24:44.524276+00:00",
+                    "task": "Get list of all LXC containers",
+                    "task_action": "uri",
+                    "task_args": "",
+                    "task_path": "/workspaces/proxmox-ee/test-proxmox.yml:20",
+                    "task_uuid": "a69d1dbd-afb1-1dab-e0b7-000000000005",
+                    "uuid": "a7f7f7cd-9589-47ea-b8ea-9a304272ff4b"
+                }
+            ],
+            "uuid": "a69d1dbd-afb1-1dab-e0b7-000000000002"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "--extra-vars 'proxmox_password=ElishNorn#416'",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/workspaces/proxmox-ee/inventory.yml"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/workspaces/proxmox-ee/test-proxmox.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/workspaces/proxmox-ee"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/vscode/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "docker",
+                "enabled": true,
+                "image": "proxmox-ee:latest",
+                "pull": {
+                    "policy": "never"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/workspaces/proxmox-ee/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Command line",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Command line",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Command line",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Command line",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "",
+        "PLAY [Test Proxmox Connection] *************************************************",
+        "",
+        "TASK [Authenticate to Proxmox API] *********************************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [Get list of all LXC containers] ******************************************",
+        "\u001b[0;31mfatal: [localhost]: FAILED! => {\"msg\": \"The task includes an option with an undefined variable. The error was: 'proxmox_node' is undefined. 'proxmox_node' is undefined\\n\\nThe error appears to be in '/workspaces/proxmox-ee/test-proxmox.yml': line 20, column 7, but may\\nbe elsewhere in the file depending on the exact syntax problem.\\n\\nThe offending line appears to be:\\n\\n\\n    - name: Get list of all LXC containers\\n      ^ here\\n\"}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mlocalhost\u001b[0m                  : \u001b[0;32mok=1   \u001b[0m changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,250 @@
+{
+    "plays": [
+        {
+            "__play_name": "Test Proxmox Connection",
+            "name": "Test Proxmox Connection",
+            "pattern": "localhost",
+            "play": "Test Proxmox Connection",
+            "play_pattern": "localhost",
+            "play_uuid": "3a068902-811e-c9d8-681a-000000000002",
+            "playbook": "/workspaces/proxmox-ee/test-proxmox.yml",
+            "playbook_uuid": "bae15c89-4cd1-4f14-95ad-bee51282424d",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Failed",
+                    "__task": "Get list of all LXC containers",
+                    "__task_action": "community.proxmox.proxmox",
+                    "duration": 0.175635,
+                    "end": "2026-02-01T03:21:10.508395+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "ignore_errors": null,
+                    "play": "Test Proxmox Connection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "3a068902-811e-c9d8-681a-000000000002",
+                    "playbook": "/workspaces/proxmox-ee/test-proxmox.yml",
+                    "playbook_uuid": "bae15c89-4cd1-4f14-95ad-bee51282424d",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "action": "list",
+                                "api_host": "192.168.10.21",
+                                "api_password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "api_port": null,
+                                "api_token_id": null,
+                                "api_token_secret": null,
+                                "api_user": "root@pam",
+                                "clone": null,
+                                "clone_type": "opportunistic",
+                                "cores": null,
+                                "cpus": null,
+                                "cpuunits": null,
+                                "delete": null,
+                                "description": null,
+                                "disk": null,
+                                "disk_volume": null,
+                                "features": null,
+                                "force": false,
+                                "hookscript": null,
+                                "hostname": null,
+                                "ip_address": null,
+                                "memory": null,
+                                "mount_volumes": null,
+                                "mounts": null,
+                                "nameserver": null,
+                                "netif": null,
+                                "node": null,
+                                "onboot": null,
+                                "ostemplate": null,
+                                "ostype": "auto",
+                                "password": null,
+                                "pool": null,
+                                "pubkey": null,
+                                "purge": false,
+                                "resource": "lxc",
+                                "searchdomain": null,
+                                "startup": null,
+                                "state": "present",
+                                "storage": "local",
+                                "swap": null,
+                                "tags": null,
+                                "timeout": 30,
+                                "timezone": null,
+                                "unprivileged": true,
+                                "update": true,
+                                "validate_certs": false,
+                                "vmid": null
+                            }
+                        },
+                        "msg": "one of the following is required: vmid, hostname"
+                    },
+                    "resolved_action": "community.proxmox.proxmox",
+                    "start": "2026-02-01T03:21:10.332760+00:00",
+                    "task": "Get list of all LXC containers",
+                    "task_action": "community.proxmox.proxmox",
+                    "task_args": "",
+                    "task_path": "/workspaces/proxmox-ee/test-proxmox.yml:12",
+                    "task_uuid": "3a068902-811e-c9d8-681a-000000000004",
+                    "uuid": "8996ddaf-9b4c-4072-a6fc-2612e0c480a1"
+                }
+            ],
+            "uuid": "3a068902-811e-c9d8-681a-000000000002"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "--extra-vars 'proxmox_password=ElishNorn#416'",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/workspaces/proxmox-ee/inventory.yml"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/workspaces/proxmox-ee/test-proxmox.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/workspaces/proxmox-ee"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/vscode/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "docker",
+                "enabled": true,
+                "image": "proxmox-ee:latest",
+                "pull": {
+                    "policy": "never"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/workspaces/proxmox-ee/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Command line",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Command line",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Command line",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Command line",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "\u001b[1;35m[WARNING]: Collection community.proxmox does not support Ansible version\u001b[0m",
+        "\u001b[1;35m2.15.13\u001b[0m",
+        "",
+        "PLAY [Test Proxmox Connection] *************************************************",
+        "",
+        "TASK [Get list of all LXC containers] ******************************************",
+        "\u001b[0;31mfatal: [localhost]: FAILED! => {\"changed\": false, \"msg\": \"one of the following is required: vmid, hostname\"}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mlocalhost\u001b[0m                  : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,60 @@
+# Ansible artifacts
+*.retry
+ansible.log
+
+# Execution environment build context
+context/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+.tox/
+.nox/
+
+# Molecule (test framework)
+molecule/**/molecule.yml.bak
+
+# Collections installed locally
+collections/ansible_collections/
+
+# Roles installed locally
+roles/
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*

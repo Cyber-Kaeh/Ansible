@@ -1,0 +1,12 @@
+---
+all:
+  hosts:
+    proxmox:
+      ansible_host: 192.168.10.21
+      # Alternative: ansible_host: prox.internal
+
+  vars:
+    # Proxmox API connection settings
+    proxmox_api_host: 192.168.10.21
+    proxmox_api_user: root@pam
+    # Password will be prompted at runtime (don't store in file)
