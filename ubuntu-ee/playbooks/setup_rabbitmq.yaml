@@ -1,0 +1,43 @@
+- name: Install Homebrew and RabbitMQ
+  hosts: allhosts
+  tasks:
+    - name: Install Homebrew dependencies
+      ansible.builtin.apt:
+        name:
+          - build-essential
+          - curl
+          - git
+          - libssl-dev
+          - libffi-dev
+          - python3-dev
+          - ruby
+          - wget
+        state: present
+        update_cache: true
+      become: true
+
+    - name: Install Homebrew
+      ansible.builtin.shell: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      args:
+        creates: /home/linuxbrew/.linuxbrew/bin/brew
+
+    - name: Ensure Homebrew is in PATH
+      ansible.builtin.lineinfile:
+        path: /home/{{ ansible_user }}/.profile
+        line: 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+        state: present
+
+    - name: Install RabbitMQ using Homebrew
+      ansible.builtin.shell: |
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        brew install rabbitmq
+      args:
+        creates: /home/linuxbrew/.linuxbrew/Cellar/rabbitmq
+
+    - name: Start RabbitMQ service
+      ansible.builtin.shell: |
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        brew services start rabbitmq
+      args:
+        creates: /var/run/rabbitmq.pid

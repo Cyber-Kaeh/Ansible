@@ -1,0 +1,24 @@
+- name: Create Users
+  hosts: allhosts
+  become: true
+  tasks:
+    - name: Create user t1user
+      ansible.builtin.user:
+        name: t1user
+        password: "{{ t1user_password | password_hash('sha512') }}"
+        shell: /bin/bash
+        state: present
+        create_home: true
+
+    - name: Create user t1admin
+      ansible.builtin.user:
+        name: t1admin
+        password: "{{ t1admin_password | password_hash('sha512') }}"
+        shell: /bin/bash
+        state: present
+        create_home: true
+        groups: sudo
+        append: true
+        generate_ssh_key: true
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
